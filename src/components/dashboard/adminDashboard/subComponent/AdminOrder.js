@@ -31,6 +31,11 @@ export default function AdminOrder() {
   });
   React.useEffect(() => {
     GetAllBooking(PageNumber);
+    const interval = setInterval(() => {
+      GetAllBooking(PageNumber);
+    },5*1000);
+    return () => clearInterval(interval);
+
   }, []);
 
   const GetAllBooking = (CurrentNumber) => {

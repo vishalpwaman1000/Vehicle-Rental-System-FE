@@ -13,6 +13,10 @@ export default function AdminHistory() {
 
   React.useEffect(() => {
     GetOrderDetails(PageNumber);
+    const interval = setInterval(() => {
+      GetOrderDetails(PageNumber);
+    },5*1000);
+    return () => clearInterval(interval);
   }, []);
 
   const GetOrderDetails = (CurrentNumber) => {

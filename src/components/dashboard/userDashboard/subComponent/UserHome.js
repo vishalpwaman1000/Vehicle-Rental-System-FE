@@ -58,8 +58,10 @@ export default function UserHome() {
 
   React.useEffect(() => {
     GetVehicle(1);
-    // GetAllStockDetails();
-    // console.log("SearchFlag : ", SearchFlag);
+    const interval = setInterval(() => {
+      GetVehicle(1);
+    },5*1000);
+    return () => clearInterval(interval);
   }, []);
 
   const GetVehicle = (CurrentNumber) => {

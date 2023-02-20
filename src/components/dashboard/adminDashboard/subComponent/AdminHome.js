@@ -39,6 +39,10 @@ export default function AdminHome() {
 
   React.useEffect(() => {
     GetVehicle(1);
+    const interval = setInterval(() => {
+      GetVehicle(1);
+    }, 5 * 1000);
+    return () => clearInterval(interval);
   }, []);
 
   const GetVehicle = (CurrentNumber) => {
@@ -58,7 +62,7 @@ export default function AdminHome() {
           console.warn("GetVehicle Message : ", data?.data.message);
         }
       })
-      .catch((error) => {});
+      .catch((error) => { });
   };
 
   const handleChange = (e) => {
@@ -158,10 +162,10 @@ export default function AdminHome() {
       });
   };
 
-  const UpdateMenuDetail = () => {
+  const UpdateVehicle = () => {
     debugger;
 
-    console.log("Insert Data : ", Data);
+    console.log("Update Data : ", Data);
 
     if (
       Data.VehicleName === "" ||
@@ -186,7 +190,8 @@ export default function AdminHome() {
     let data = {
       vehicleID: Data.VehicleID,
       vehicleName: Data.VehicleName,
-      vehicleDescription: Data.vehicleDescription,
+      vehicleNumber: Data.VehicleNumber,
+      vehicleDescription: Data.VehicleDescription,
       price: Data.Price,
       imageUrl: Data.ImageUrl,
     };
@@ -471,7 +476,7 @@ export default function AdminHome() {
                   <a
                     className="btn btn-primary me-3 w-50"
                     onClick={() => {
-                      UpdateMenuDetail();
+                      UpdateVehicle();
                     }}
                   >
                     Update

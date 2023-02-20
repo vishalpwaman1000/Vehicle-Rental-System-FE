@@ -29,6 +29,10 @@ export default function UserOrder() {
 
   React.useEffect(() => {
     GetBooking(PageNumber);
+    const interval = setInterval(() => {
+      GetBooking(PageNumber);
+    },5*1000);
+    return () => clearInterval(interval);
   }, []);
 
   const GetBooking = (CurrentNumber) => {

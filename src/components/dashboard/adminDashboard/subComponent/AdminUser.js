@@ -107,54 +107,6 @@ export default function AdminUser() {
         theme: "fusion",
       },
       data: [
-        // {
-        //   label: "Jan",
-        //   value: 0,
-        // },
-        // {
-        //   label: "Feb",
-        //   value: 1,
-        // },
-        // {
-        //   label: "Mar",
-        //   value: 0,
-        // },
-        // {
-        //   label: "Apr",
-        //   value: 0,
-        // },
-        // {
-        //   label: "May",
-        //   value: 0,
-        // },
-        // {
-        //   label: "June",
-        //   value: 0,
-        // },
-        // {
-        //   label: "July",
-        //   value: 0,
-        // },
-        // {
-        //   label: "Aug",
-        //   value: 0,
-        // },
-        // {
-        //   label: "Sep",
-        //   value: 0,
-        // },
-        // {
-        //   label: "Oct",
-        //   value: 0,
-        // },
-        // {
-        //   label: "Nov",
-        //   value: 0,
-        // },
-        // {
-        //   label: "Dec",
-        //   value: 0,
-        // },
       ],
     },
   });
@@ -173,54 +125,6 @@ export default function AdminUser() {
         theme: "fusion",
       },
       data: [
-        // {
-        //   label: "Jan",
-        //   value: 0,
-        // },
-        // {
-        //   label: "Feb",
-        //   value: 1,
-        // },
-        // {
-        //   label: "Mar",
-        //   value: 0,
-        // },
-        // {
-        //   label: "Apr",
-        //   value: 0,
-        // },
-        // {
-        //   label: "May",
-        //   value: 0,
-        // },
-        // {
-        //   label: "June",
-        //   value: 0,
-        // },
-        // {
-        //   label: "July",
-        //   value: 0,
-        // },
-        // {
-        //   label: "Aug",
-        //   value: 0,
-        // },
-        // {
-        //   label: "Sep",
-        //   value: 0,
-        // },
-        // {
-        //   label: "Oct",
-        //   value: 0,
-        // },
-        // {
-        //   label: "Nov",
-        //   value: 0,
-        // },
-        // {
-        //   label: "Dec",
-        //   value: 0,
-        // },
       ],
     },
   });
@@ -239,54 +143,6 @@ export default function AdminUser() {
         theme: "fusion",
       },
       data: [
-        // {
-        //   label: "Jan",
-        //   value: 0,
-        // },
-        // {
-        //   label: "Feb",
-        //   value: 1,
-        // },
-        // {
-        //   label: "Mar",
-        //   value: 0,
-        // },
-        // {
-        //   label: "Apr",
-        //   value: 0,
-        // },
-        // {
-        //   label: "May",
-        //   value: 0,
-        // },
-        // {
-        //   label: "June",
-        //   value: 0,
-        // },
-        // {
-        //   label: "July",
-        //   value: 0,
-        // },
-        // {
-        //   label: "Aug",
-        //   value: 0,
-        // },
-        // {
-        //   label: "Sep",
-        //   value: 0,
-        // },
-        // {
-        //   label: "Oct",
-        //   value: 0,
-        // },
-        // {
-        //   label: "Nov",
-        //   value: 0,
-        // },
-        // {
-        //   label: "Dec",
-        //   value: 0,
-        // },
       ],
     },
   });
@@ -305,54 +161,6 @@ export default function AdminUser() {
         theme: "fusion",
       },
       data: [
-        // {
-        //   label: "Jan",
-        //   value: 0,
-        // },
-        // {
-        //   label: "Feb",
-        //   value: 1,
-        // },
-        // {
-        //   label: "Mar",
-        //   value: 0,
-        // },
-        // {
-        //   label: "Apr",
-        //   value: 0,
-        // },
-        // {
-        //   label: "May",
-        //   value: 0,
-        // },
-        // {
-        //   label: "June",
-        //   value: 0,
-        // },
-        // {
-        //   label: "July",
-        //   value: 0,
-        // },
-        // {
-        //   label: "Aug",
-        //   value: 0,
-        // },
-        // {
-        //   label: "Sep",
-        //   value: 0,
-        // },
-        // {
-        //   label: "Oct",
-        //   value: 0,
-        // },
-        // {
-        //   label: "Nov",
-        //   value: 0,
-        // },
-        // {
-        //   label: "Dec",
-        //   value: 0,
-        // },
       ],
     },
   });
@@ -363,6 +171,10 @@ export default function AdminUser() {
 
   React.useEffect(() => {
     GetGraph();
+    const interval = setInterval(() => {
+      GetGraph();
+    },5*1000);
+    return () => clearInterval(interval);
   }, []);
 
   const GetGraph = async () => {
