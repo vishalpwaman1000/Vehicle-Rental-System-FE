@@ -125,6 +125,9 @@ export default function UserOrder() {
               <th>Image</th>
               <th>Vehicle Name</th>
               <th>vehicle Number</th>
+              <th>Source</th>
+              <th>Destination</th>
+              <th>Distance</th>
               <th>Price</th>
               <th>Status</th>
               <th></th>
@@ -146,6 +149,9 @@ export default function UserOrder() {
                       </td>
                       <td>{data.vehicleName}</td>
                       <td>{data.vehicleNumber}</td>
+                      <td>{data.source}</td>
+                      <td>{data.destination}</td>
+                      <td>{data.totalDistance}</td>
                       <td>{data.totalPrice}</td>
                       <td
                         class={
