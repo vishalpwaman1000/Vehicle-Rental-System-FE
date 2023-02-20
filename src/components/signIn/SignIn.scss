@@ -1,0 +1,30 @@
+.signIn-SubContainer-Header {
+    height: 8%;
+    font-family: "Roboto";
+    display: flex;
+    align-items: center;
+}
+
+.signIn-SubContainer-Body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto";
+    background-color: blueviolet;
+
+    .signIn-SubContainer-Body-Box1 {
+        min-width: 30%;
+
+        .signIn-SubContainer-Body-Box1-Header {
+            height: 15%;
+        }
+        .signIn-SubContainer-Body-Box1-Body {
+            height: 75%;
+        }
+        .signIn-SubContainer-Body-Box1-Footer {
+            height: 10%;
+            text-decoration: none;
+        }
+    }
+}

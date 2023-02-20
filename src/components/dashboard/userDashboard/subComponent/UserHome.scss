@@ -1,0 +1,20 @@
+.userHome-Container {
+    font-family: "Roboto";
+
+    .customer-Order-List {
+        overflow: auto;
+        height: 92%;
+    }
+
+    .customer-Order-List::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.userHome-Header {
+    height: 8%;
+}
+
+.userHome-Body {
+    height: 92%;
+}

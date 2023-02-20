@@ -1,0 +1,38 @@
+.adminHome-Container {
+    min-width: 100%;
+}
+
+.adminHome-Header {
+    height: 8%;
+}
+
+.adminHome-Body {
+    height: 100%;
+}
+
+.adminHome-Grid {
+    width: 75%;
+    overflow: auto;
+}
+
+.adminHome-Grid::-webkit-scrollbar {
+    display: none;
+}
+
+.adminHome-Input {
+    width: 25%;
+    overflow: auto;
+    border-left: 0.5px solid lightgray    // background-color: lightgoldenrodyellow;
+}
+
+.adminHome-Input::-webkit-scrollbar {
+    display: none;
+}
+
+.card-Info {
+    margin: 0;
+}
+
+.card-body {
+    height: 200px;
+}
